@@ -3,13 +3,12 @@
 # Finalmente, muestra por consola la lista de países ordenados alfabéticamente y separados por comas.
 
 def main():
-    paises = input("Introduce los paises")
-    paises = paises.split(",")
-    for pais in paises:
-        pais = pais.lstrip()
-        pais = pais.rstrip()
-        print(pais)
+    paises = input("Introduce los paises: ")
+    paises = paises.replace(" ","")
+    paises = paises.title()
+    paises = paises.split(",")     
     paises = set(paises)
+    paises = sorted(paises) #Al ordenar los paises, nos convierte el SET en una lista
     print(paises)
 
 
